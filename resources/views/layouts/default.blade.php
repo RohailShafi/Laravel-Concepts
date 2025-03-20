@@ -1,20 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rohail here</title>
+{{--    <title></title>--}}
     @include('includes.head')
 </head>
 <body>
-<div class="container">
-    <header class="row">
-        @include('includes.header')
-    </header>
-    <div id="main" class="row">
-        @yield('content')
-    </div>
-    <footer class="row">
-        @include('includes.footer')
-    </footer>
-</div>
+@include('includes.header')
+
+{{-- Content section for child views --}}
+<main class="">
+    @yield('content')
+</main>
+
+@include('includes.footer')
 </body>
 </html>
