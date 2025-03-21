@@ -7,8 +7,9 @@
         </button>
 
         <!-- Navbar Menu Items -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+        <div class="px-3 collapse navbar-collapse gap-2" id="navbarNav">
+            <ul class="p-2 navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-light fw-bold" href="{{route('posts.index')}}">Posts Crud</a></li>
                 <li class="nav-item"><a class="nav-link text-light fw-bold" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-light fw-bold" href="{{ route('about') }}">About</a></li>
                 <li class="nav-item"><a class="nav-link text-light fw-bold" href="{{ route('service') }}">Services</a></li>

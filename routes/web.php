@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
+use App\Http\Controllers\PostController;
 
 //profile routes
 Route::get('/', [ProfileController::class, 'show']);
@@ -24,6 +25,12 @@ Route::put('/contact/update', [ContactController::class, 'update'])->name('conta
 //    return View::make('pages.contact');
 //})->name('contact');
 
+
+// define resource for posts
+Route::resource('posts' , PostController::class);
+
+
+//rest routes
 Route::get('/service', function() {
     return View::make('pages.service');
 })->name('service');
