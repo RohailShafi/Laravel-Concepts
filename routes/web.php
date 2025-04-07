@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CsvController;
 
 //profile routes
 Route::get('/', [ProfileController::class, 'show']);
@@ -38,5 +39,7 @@ Route::get('/service', function() {
 Route::get('/about', function() {
     return View::make('pages.about');
 })->name('about');
+
+Route::get('/users' , [CsvController::class , 'index']);
 
 
